@@ -46,6 +46,21 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-kubernetes-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.javaoperatorsdk</groupId>
+      <artifactId>kubernetes-webhooks-framework-core</artifactId>
+      <version>1.1.3</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>kubernetes-client</artifactId>
+          <groupId>io.fabric8</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
