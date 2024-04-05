@@ -1,31 +1,17 @@
-apiVersion: cert-manager.io/v1
-kind: Certificate
+apiVersion: v1
+kind: Secret
 metadata:
-  name: webhook1-certificate
-  namespace: default
-spec:
-  secretName: webhook1-certificate
-  dnsNames:
-    - webhook1.example1
-  issuerRef:
-    name: selfsigned
-
----
-apiVersion: cert-manager.io/v1
-kind: Issuer
-metadata:
-  name: selfsigned
-  namespace: default
-spec:
-  selfSigned: {}
-
+  name: pkcs12-pass
+data:
+  password: c3VwZXJzZWNyZXQ=
+type: Opaque
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
   name: pod-mutating-webhook
   annotations:
-    cert-manager.io/inject-ca-from: default/webhook1-certificate
+    cert-manager.io/inject-ca-from: default/sample-pod-mutating-webhook
 webhooks:
   - name: sample.mutating.webhook
     clientConfig:

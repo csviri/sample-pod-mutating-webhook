@@ -61,6 +61,15 @@
       <artifactId>quarkus-container-image-jib</artifactId>
     </dependency>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-minikube</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkiverse.certmanager</groupId>
+      <artifactId>quarkus-certmanager</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+    <dependency>
       <groupId>io.javaoperatorsdk</groupId>
       <artifactId>kubernetes-webhooks-framework-core</artifactId>
       <version>${josdk.webhook.version}</version>
