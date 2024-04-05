@@ -16,7 +16,6 @@ public class PodMutatingEndpoint {
     public static final String ADD_ANNOTATION_PATH = "mutate";
     private static final Logger log = LoggerFactory.getLogger(AdmissionControllerConfig.class);
 
-
     private final AsyncAdmissionController<Pod> defaultAnnotationController;
 
     @Inject
