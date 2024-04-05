@@ -15,7 +15,6 @@ import static io.csivir.AdmissionControllerConfig.SAMPLE_KEY;
 import static io.csivir.AdmissionControllerConfig.SAMPLE_VALUE;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 class PodMutatingEndpointTest {
